@@ -21,7 +21,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
   var peer = new Peer("replete",{　
   host: 'livestream-santosh.herokuapp.com',
   secure: true,
-  port: 900,
+  port: 4937,
   debug: 3,
   config: {'iceServers': [
                           { url: 'stun:stun.l.google.com:19302' }
@@ -37,7 +37,7 @@ s.brodcastVideo=function(){
 peer = new Peer("replete",{　
 host: 'livestream-santosh.herokuapp.com',
 secure: true,
-port: 900,
+port: 4937,
 debug: 3,
 config: {'iceServers': [
                         { url: 'stun:stun.l.google.com:19302' }

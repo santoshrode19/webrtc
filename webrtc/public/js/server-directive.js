@@ -20,8 +20,8 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
   // New peer connection with our heroku server
   var peer = new Peer("replete",{　
   host: 'localhost',
-  secure: true,
-  port: 443,
+  //secure: true,
+  port: 9000,
   debug: 3,
   config: {'iceServers': [
                           { url: 'stun:stun.l.google.com:19302' }
@@ -36,8 +36,8 @@ s.brodcastVideo=function(){
 //window.alert( "called" );
 peer = new Peer("replete",{　
 host: 'localhost',
-secure: true,
-port: 443,
+//secure: true,
+port: 9000,
 debug: 3,
 config: {'iceServers': [
                         { url: 'stun:stun.l.google.com:19302' }

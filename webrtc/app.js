@@ -36,7 +36,7 @@ var peerApp = peerExpress();
 var peerServer = require('http').createServer(peerApp);
 
 var options = { debug: true }
-var peerPort = 443;
+var peerPort = 9000;
 
 peerApp.use('/', ExpressPeerServer(peerServer, options));
 peerServer.listen(peerPort);

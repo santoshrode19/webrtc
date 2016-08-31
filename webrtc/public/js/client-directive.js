@@ -19,9 +19,9 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
 
 // New peer connection with our heroku server
 var peer = new Peer({　
-host: 'livestream-santosh.herokuapp.com',
+host: 'webrtc-santosh.herokuapp.com',
 secure: true,
-port: 4937,
+port: 443,
 debug: 3,
 timeout:500000,
 allow_discovery:true,

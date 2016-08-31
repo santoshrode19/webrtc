@@ -19,11 +19,17 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
 
 // New peer connection with our heroku server
 var peer = new Peer({　
-host: 'webrtc-santosh.herokuapp.com',
+host: 'livestream-santosh.herokuapp.com',
 secure: true,
 port: 443,
 debug: 3,
-//key:'o7cxezbojniv0a4i',
+timeout:500000,
+allow_discovery:true,
+config: {'iceServers': [
+                        { url: 'stun:stun.l.google.com:19302' }
+                      //  { url: 'turn:homeo@turn.bistri.com:80', credential: 'homeo' }
+                      ]},
+//key:'o7cxezbojniv0a4i'
 });
 peer.on('open', function(id) {
 s.id = id;

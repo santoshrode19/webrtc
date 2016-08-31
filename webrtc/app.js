@@ -2,6 +2,7 @@ var express = require('express'),
   path = require('path'),
   cookieParser = require('cookie-parser'),
   bodyParser = require('body-parser');
+  PeerServer = require('peer').PeerServer;
 
 var routes = require('./routes');
 
@@ -26,6 +27,19 @@ app.get('/', routes.index);
 
 app.set('port', process.env.PORT || 200);
 
+
+// peer_server
+
+var ExpressPeerServer = require('peer').ExpressPeerServer;
+var peerExpress = require('express');
+var peerApp = peerExpress();
+var peerServer = require('http').createServer(peerApp);
+
+var options = { debug: true }
+var peerPort = 443;
+
+peerApp.use('/', ExpressPeerServer(peerServer, options));
+peerServer.listen(peerPort);
 var server = app.listen(app.get('port'), function() {
 	// log a message to console!
 });

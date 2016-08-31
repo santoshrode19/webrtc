@@ -19,7 +19,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
 
   // New peer connection with our heroku server
   var peer = new Peer("replete",{　
-  host: 'livestream-santosh.herokuapp.com',
+  host: 'localhost',
   secure: true,
   port: 443,
   debug: 3,
@@ -35,7 +35,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
 s.brodcastVideo=function(){
 //window.alert( "called" );
 peer = new Peer("replete",{　
-host: 'livestream-santosh.herokuapp.com',
+host: 'localhost',
 secure: true,
 port: 443,
 debug: 3,

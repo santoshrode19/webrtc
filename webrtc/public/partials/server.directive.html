@@ -1,0 +1,30 @@
+<div class="container">
+<button ng-click="brodcastVideo()" class="btn btn--m btn--green btn--raised" >Start Brodcast</button>
+<span class="display-block text-center">Your ID : {{id}}</span>
+
+<div flex-container="column" flex-align="space-between center">
+<div flex-item flex-gutter="24">
+<div flex-container="row">
+<lx-text-field label="Enter brodcast name">
+<input type="text" ng-model="id">
+</lx-text-field>
+</div>
+</div>
+</div>
+<div>
+<div class="">
+<span class="display-block text-center">Local video</span>
+<div>
+<video ng-src="{{localVdoURL}}" width="1024" height="1024" muted="true" autoplay></video> <br>
+</div>
+</div>
+</div>
+
+
+
+<!-- <div flex-item="8">
+<div class="p+"><span class="fs-headline display-block">Peer's Video</span>
+<video ng-src="{{peerVdoURL}}" id="peerVideo" autoplay></video>
+<button ng-click="endCall()" class="btn btn--m btn--orange btn--raised" lx-ripple>End Call</button>
+</div>
+</div> -->

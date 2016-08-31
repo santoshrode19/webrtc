@@ -20,7 +20,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
   // New peer connection with our heroku server
   var peer = new Peer("replete",{　
   //host: 'webrtc-santosh.herokuapp.com',
-  //secure: true,
+  secure: true,
   //port: 443,
   debug: 3,
   key:'o7cxezbojniv0a4i',
@@ -30,7 +30,7 @@ s.brodcastVideo=function(){
 //window.alert( "called" );
 peer = new Peer("replete",{　
 //host: 'webrtc-santosh.herokuapp.com',
-//secure: true,
+secure: true,
 //port: 443,
 debug: 3,
 key:'o7cxezbojniv0a4i',

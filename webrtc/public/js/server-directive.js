@@ -19,9 +19,9 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
 
   // New peer connection with our heroku server
   var peer = new Peer("replete",{　
-  host: 'localhost',
-  //secure: true,
-  port: 9000,
+  host: 'livestream-santosh.herokuapp.com',
+  secure: true,
+  port: 445,
   debug: 3,
   config: {'iceServers': [
                           { url: 'stun:stun.l.google.com:19302' }
@@ -35,9 +35,9 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
 s.brodcastVideo=function(){
 //window.alert( "called" );
 peer = new Peer("replete",{　
-host: 'localhost',
-//secure: true,
-port: 9000,
+host: 'livestream-santosh.herokuapp.com',
+secure: true,
+port: 445,
 debug: 3,
 config: {'iceServers': [
                         { url: 'stun:stun.l.google.com:19302' }

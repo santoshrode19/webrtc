@@ -18,7 +18,7 @@ s.statusMsg = 'Contacting Peer Server...';
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
 
   // New peer connection with our heroku server
-  var peer = new Peer("replete",{　
+  var peer = new Peer({　
   host: 'webrtc-santosh.herokuapp.com',
   secure: true,
   port: 443,
@@ -34,7 +34,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
 
 s.brodcastVideo=function(){
 //window.alert( "called" );
-peer = new Peer("replete",{　
+peer = new Peer({　
 host: 'webrtc-santosh.herokuapp.com',
 secure: true,
 port: 443,

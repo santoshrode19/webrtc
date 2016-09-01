@@ -87,9 +87,10 @@ s.callInProgress = false;
 };
 function initSelfVideo(cb) {
 navigator.getUserMedia({
-audio: true,
-video: true
-}, function(stream) {
+//audio: true,
+//video: true
+},
+ function(stream) {
 s.localStream = stream;
 s.localVdoURL = $sce.trustAsResourceUrl(URL.createObjectURL(stream));
 cb();

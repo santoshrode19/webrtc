@@ -89,12 +89,9 @@ handleCall(peer.call(s.peerId, s.localStream));
 
 //end call function
 s.endCall = function() {
-//peer.close();
-//$state.go('server');
-s.isCalling.close();
-//s.callInProgress.close();
-s.callInProgress = false;
-//$location.path('/#');
+  s.callInProgress.close();
+  s.callInProgress = false;
+  $location.reload();
 
 };
 

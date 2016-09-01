@@ -1,5 +1,5 @@
 'use strict';
-$nvc.directive('serverVideo', [ '$sce','LxDialogService','$state', 'LxNotificationService','$location', function($sce,$state,LxDialogService, LxNotificationService,$location) {
+$nvc.directive('serverVideo', [ '$sce','LxDialogService','$state', 'LxNotificationService','$location',' $window' function($sce,$state,LxDialogService, $window, LxNotificationService,$location) {
 return {
 restrict: 'E',
 templateUrl: 'partials/server.directive.html',
@@ -91,7 +91,7 @@ handleCall(peer.call(s.peerId, s.localStream));
 s.endCall = function() {
   s.callInProgress.close();
   s.callInProgress = false;
-  $location.reload();
+   $window.location.reload();
 
 };
 

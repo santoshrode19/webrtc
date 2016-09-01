@@ -1,5 +1,5 @@
 'use strict';
-$nvc.directive('serverVideo', [ '$sce','LxDialogService','$state', 'LxNotificationService','$location',' $window' function($sce,$state,LxDialogService, $window, LxNotificationService,$location) {
+$nvc.directive('serverVideo', [ '$sce','LxDialogService','$state', 'LxNotificationService','$location',' $window', function($sce,$state,LxDialogService, $window, LxNotificationService,$location) {
 return {
 restrict: 'E',
 templateUrl: 'partials/server.directive.html',

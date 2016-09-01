@@ -91,7 +91,7 @@ handleCall(peer.call(s.peerId, s.localStream));
 s.endCall = function() {
   s.callInProgress.close();
   s.callInProgress = false;
-  //$state.reload();
+  s.$state.reload();
 };
 
 

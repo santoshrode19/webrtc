@@ -1,8 +1,17 @@
-<div class="container">
-<button ng-click="brodcastVideo()" class="btn btn--m btn--green btn--raised" >Start Brodcast</button>
+<!--<lx-dialog class="dialog dialog--l" id="statusModal">
+<div class="dialog__content p++">
+<span class="fs-subhead display-block text-center">{{statusMsg}}</span>
+</div>
+</lx-dialog> -->
+<a href="https://livestream-santosh.herokuapp.com/" style="padding-left:5%;"> <button  style="margin-top:20px;" class="btn btn--m btn--orange btn--raised" >Home</button> </a>
+<button  style="margin-top:20px;"  ng-click="startCall()"  class="btn btn--m btn--green btn--raised" ng-hide="callInProgress"> Start brodcast</button>
+<button ng-click="endCall()" style="margin-top:20px;" class="btn btn--m btn--red btn--raised" lx-ripple ng-show="callInProgress">End Brodcast</button>
+
+<div class="container" ng-show="callInProgress">
 <span class="display-block text-center">Your ID : {{id}}</span>
 
-<div flex-container="column" flex-align="space-between center">
+
+<!-- <div flex-container="column" flex-align="space-between center">
 <div flex-item flex-gutter="24">
 <div flex-container="row">
 <lx-text-field label="Enter brodcast name">
@@ -10,12 +19,12 @@
 </lx-text-field>
 </div>
 </div>
+</div> -->
+<div>
+<div class="" >
+<div>
+<video style="margin-left:20%;margin-top:1%;" ng-src="{{localVdoURL}}" width="900" height="700" muted="true" autoplay controls></video> <br>
 </div>
-<div>
-<div class="">
-<span class="display-block text-center">Local video</span>
-<div>
-<video ng-src="{{localVdoURL}}" width="1024" height="1024" muted="true" autoplay></video> <br>
 </div>
 </div>
 </div>

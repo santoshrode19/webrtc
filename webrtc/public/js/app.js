@@ -24,6 +24,10 @@ var $nvc=angular.module('nwk-videochat', ['ui.router','lumx'])
               url : '/server',
               templateUrl : '../partials/server.html',
             })
+            .state('server.brodcast', {
+                     url : '/brodcast',
+                     templateUrl : '../partials/brodcast.html',
+                   })
           .state('client', {
                      url : '/client',
                      templateUrl : '../partials/client.html',

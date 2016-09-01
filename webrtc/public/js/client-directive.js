@@ -31,6 +31,7 @@ config: {'iceServers': [
                       ]},
 //key:'o7cxezbojniv0a4i'
 });
+
 peer.on('open', function(id) {
 s.id = id;
 s.statusMsg = 'Connected to Peer Server...';
@@ -68,7 +69,7 @@ console.error(err);
 });
 s.startCall = function($event) {
 
-if ($event.which === 13) {
+//if ($event.which === 13) {
 
 s.isDisabled = true;
 initSelfVideo(function() {
@@ -78,7 +79,7 @@ initSelfVideo(function() {
 handleCall(peer.call(s.peerId, s.localStream));
 
 });
-}
+//}
 };
 s.endCall = function() {
 s.callInProgress.close();

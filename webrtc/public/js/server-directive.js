@@ -1,5 +1,5 @@
 'use strict';
-$nvc.directive('serverVideo', [ '$sce','LxDialogService', 'LxNotificationService', function($sce,LxDialogService, LxNotificationService) {
+$nvc.directive('serverVideo', [ '$sce','LxDialogService','$state', 'LxNotificationService','$location', function($sce,$state,LxDialogService, LxNotificationService,$location) {
 return {
 restrict: 'E',
 templateUrl: 'partials/server.directive.html',
@@ -8,7 +8,8 @@ s.statusMsg = 'Loading..',
 s.id = '',
 s.localStream = '',
 s.isDisabled = false,
-startSelfVideo();
+//startSelfVideo();
+s.isCalling=false;
 s.callInProgress = false;
 setTimeout(function() {
 //LxDialogService.open('statusModal');
@@ -19,7 +20,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
 
   // New peer connection with our heroku server
   var peer = new Peer({　
-  host: 'webrtc-santosh.herokuapp.com',
+host: 'webrtc-santosh.herokuapp.com',
   secure: true,
   port: 443,
   debug: 3,
@@ -28,26 +29,9 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
                         //  { url: 'turn:homeo@turn.bistri.com:80', credential: 'homeo' }
              ]},
   timeout:500000,
-  allow_discovery:true
-//  key:'o7cxezbojniv0a4i'
+  allow_discovery:true,
+  //key:'o7cxezbojniv0a4i'
   });
-
-s.brodcastVideo=function(){
-//window.alert( "called" );
-peer = new Peer({　
-host: 'webrtc-santosh.herokuapp.com',
-secure: true,
-port: 443,
-debug: 3,
-config: {'iceServers': [
-                        { url: 'stun:stun.l.google.com:19302' }
-                    //    { url: 'turn:homeo@turn.bistri.com:80', credential: 'homeo' }
-                      ]},
-timeout:500000,
-allow_discovery:true
-//key:'o7cxezbojniv0a4i'
-});
-}
 
 
 peer.on('open', function(id) {
@@ -87,9 +71,9 @@ console.error(err);
 
 
 // startCall function
-s.startCall = function($event) {
+s.startCall = function() {
 
-if ($event.which === 13) {
+//if ($event.which === 13) {
 
 s.isDisabled = true;
 initSelfVideo(function() {
@@ -99,14 +83,19 @@ initSelfVideo(function() {
 handleCall(peer.call(s.peerId, s.localStream));
 
 });
-}
+//}
 };
 
 
 //end call function
 s.endCall = function() {
-s.callInProgress.close();
+//peer.close();
+//$state.go('server');
+s.isCalling.close();
+//s.callInProgress.close();
 s.callInProgress = false;
+//$location.path('/#');
+
 };
 
 
@@ -143,10 +132,11 @@ s.error = 'Unable to access your camera, Please try again';
 //handdle call
 function handleCall(call) {
 
-  console.log(" call data "+simpleStringify(call));
+  //console.log(" call data "+simpleStringify(call));
 /*if (s.callInProgress) {
 s.callInProgress.close();
 }*/
+s.isCalling=call;
 call.on('stream', function(peerStream) {
 s.peerVdoURL = $sce.trustAsResourceUrl(URL.createObjectURL(peerStream));
 s.$apply();

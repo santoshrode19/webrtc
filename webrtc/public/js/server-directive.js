@@ -24,10 +24,9 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
   secure: true,
   port: 443,
   debug: 3,
-  //config: {'iceServers': [
-//{url:'stun:stun01.sipphone.com'},
-
-//]},
+  config: {'iceServers': [
+{url:'stun:stun.l.google.com:19302'}
+]},
   timeout:500000,
   allow_discovery:true,
   //key:'o7cxezbojniv0a4i'

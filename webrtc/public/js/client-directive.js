@@ -25,10 +25,10 @@ port: 443,
 debug: 3,
 timeout:500000,
 allow_discovery:true,
-//config: {'iceServers': [
-//{url:'stun:stunserver.org'},
+config: {'iceServers': [
+  {url:'stun:stun.l.google.com:19302'}
  //{ url: 'turn:homeo@turn.bistri.com:80', credential: 'homeo' }
-              //        ]},
+                      ]},
 //key:'o7cxezbojniv0a4i'
 });
 
@@ -88,7 +88,7 @@ s.callInProgress = false;
 function initSelfVideo(cb) {
 navigator.getUserMedia({
 audio: true,
-video: true
+//video: true
 },
  function(stream) {
 s.localStream = stream;

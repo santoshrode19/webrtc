@@ -26,7 +26,7 @@ debug: 3,
 timeout:500000,
 allow_discovery:true,
 config: {'iceServers': [
-{url:'stun:stun4.l.google.com:19302'},
+{url:'stun:stun01.sipphone.com'},
 {
 url: 'turn:numb.viagenie.ca',
 credential: 'muazkh',

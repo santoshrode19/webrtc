@@ -25,7 +25,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
   port: 443,
   debug: 3,
   config: {'iceServers': [
-{url:'stun:stun4.l.google.com:19302'},
+{url:'stun:stun01.sipphone.com'},
 {
 url: 'turn:192.158.29.39:3478?transport=udp',
 credential: 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',

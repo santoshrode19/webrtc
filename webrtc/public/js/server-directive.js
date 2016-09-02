@@ -24,19 +24,10 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
   secure: true,
   port: 443,
   debug: 3,
-  config: {'iceServers': [
-{url:'stun:stun01.sipphone.com'},
-{
-url: 'turn:192.158.29.39:3478?transport=udp',
-credential: 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
-username: '28224511:1379330808'
-},
-{
-url: 'turn:192.158.29.39:3478?transport=tcp',
-credential: 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
-username: '28224511:1379330808'
-}
-]},
+  //config: {'iceServers': [
+//{url:'stun:stun01.sipphone.com'},
+
+//]},
   timeout:500000,
   allow_discovery:true,
   //key:'o7cxezbojniv0a4i'

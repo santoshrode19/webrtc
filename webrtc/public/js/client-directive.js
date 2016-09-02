@@ -25,24 +25,10 @@ port: 443,
 debug: 3,
 timeout:500000,
 allow_discovery:true,
-config: {'iceServers': [
-{url:'stun:stun01.sipphone.com'},
-{
-url: 'turn:numb.viagenie.ca',
-credential: 'muazkh',
-username: 'webrtc@live.com'
-},
-{
-url: 'turn:192.158.29.39:3478?transport=udp',
-credential: 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
-username: '28224511:1379330808'
-},
-{
-url: 'turn:192.158.29.39:3478?transport=tcp',
-credential: 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
-username: '28224511:1379330808'
-}
-                      ]},
+//config: {'iceServers': [
+//{url:'stun:stunserver.org'},
+ //{ url: 'turn:homeo@turn.bistri.com:80', credential: 'homeo' }
+              //        ]},
 //key:'o7cxezbojniv0a4i'
 });
 

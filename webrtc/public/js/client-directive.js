@@ -26,8 +26,9 @@ debug: 3,
 timeout:500000,
 allow_discovery:true,
 config: {'iceServers': [
-  {url:'stun:stun.l.google.com:19302'}
- //{ url: 'turn:homeo@turn.bistri.com:80', credential: 'homeo' }
+{url:'stun:stunserver.org'},
+{ url: 'turn:numb.viagenie.ca', credential: 'muazkh', username: 'webrtc@live.com' }
+
                       ]},
 //key:'o7cxezbojniv0a4i'
 });

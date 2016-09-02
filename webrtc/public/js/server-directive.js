@@ -25,7 +25,8 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
   port: 443,
   debug: 3,
   config: {'iceServers': [
-{url:'stun:stun.l.google.com:19302'}
+{url:'stun:stunserver.org'},
+{ url: 'turn:numb.viagenie.ca', credential: 'muazkh', username: 'webrtc@live.com' }
 ]},
   timeout:500000,
   allow_discovery:true,

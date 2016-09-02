@@ -20,9 +20,9 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
 
   // New peer connection with our heroku server
   var peer = new Peer({　
-host: 'webrtc-santosh.herokuapp.com',
-  secure: true,
-  port: 443,
+//host: 'webrtc-santosh.herokuapp.com',
+  //secure: true,
+  //port: 443,
   debug: 3,
   config: {'iceServers': [
 {url:'stun:stun.ekiga.net'},
@@ -61,7 +61,7 @@ username: '28224511:1379330808'
 ]},
   timeout:500000,
   allow_discovery:true,
-  //key:'o7cxezbojniv0a4i'
+  key:'o7cxezbojniv0a4i'
   });
 
 

@@ -89,7 +89,7 @@ s.callInProgress = false;
 function initSelfVideo(cb) {
 navigator.getUserMedia({
 audio: true,
-//video: true
+video: true
 },
  function(stream) {
 s.localStream = stream;
